@@ -91,10 +91,4 @@ public class OS_Finding{
         A[j] = temp;
     }
 
-    //hehe printy poopoo peepee
-    public static void printypoo(int[] A){
-        for(int i = 0;i<A.length;i++){
-            System.out.println(A[i]);
-        }
-    }
 }
