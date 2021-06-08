@@ -160,39 +160,4 @@ public class Dijkstra{
         }
         return i;
     }
-
-    public static void scratch(){
-        String line = "0:3,4;1,2;2,5";
-        int vertex, neighbor, weight;
-        //First, get the value before the colon
-        int i = 0;
-        while(line.charAt(i) != ':'){
-            i++;
-        }
-        vertex = Integer.parseInt(line.substring(0,i));
-        i++;
-        int j = i+1;
-
-        //Parse all values after the colon, if existing
-        while(j<=line.length()){
-            //Iterate to next comma + semicolon, or end of text line
-            if(line.charAt(j) == ','){
-                neighbor = Integer.parseInt(line.substring(i,j));
-                i = j+1;
-                j+=2;
-                //Nested loop to find the weight value
-                while(j<=line.length()-1 && line.charAt(j) != ';'){
-                    j++;
-                }
-                weight = Integer.parseInt(line.substring(i,j));
-                i=j+1;
-                j+=2;
-                //Insert to edge list here
-                System.out.printf("Vertex[%d], neighbor[%d], weight[%d]\n",vertex, neighbor, weight);
-            }
-            else{
-                j++;
-            }
-        }
-    }
 }
