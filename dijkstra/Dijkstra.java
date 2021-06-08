@@ -16,10 +16,10 @@ public class Dijkstra{
 
         int root = Integer.parseInt(args[1]);
         String fname = args[0];
-        Scanner inFile = new Scanner(new FileInputStream("data.txt"));
+        Scanner inFile = new Scanner(new FileInputStream(fname));
 
         int size = fileSize(inFile);
-        inFile = new Scanner(new FileInputStream("data.txt"));
+        inFile = new Scanner(new FileInputStream(fname));
 
         //Send file scanner, file size to generateGraph.
 
